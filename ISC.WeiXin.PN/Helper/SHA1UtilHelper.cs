@@ -8,7 +8,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ISC.Helper
+namespace ISC.WeiXin.PN.Helper
 {
     public class SHA1UtilHelper
     {

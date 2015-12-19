@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System
+namespace ISC.WeiXin.PN.Helper
 {
     public class MySharpUtility
     {

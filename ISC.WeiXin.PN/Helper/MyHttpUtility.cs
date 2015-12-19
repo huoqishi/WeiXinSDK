@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Huoqishi.ISC
+namespace ISC.WeiXin.PN.Helper
 {
     /// <summary>
     /// 处理服务器端，发送Get,Post请求
