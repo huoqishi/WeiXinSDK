@@ -1,0 +1,92 @@
+﻿<div class="page cusmenu">
+    <div class="info-box">
+        <div class="info">
+            <p><i class="info-ico fa fa-exclamation-circle fa-lg"></i>菜单编辑中</p>
+            <p>菜单未发布，可点击“保存并发布”同步到手机。</p>
+        </div>
+    </div>
+    <div class="msg">可添加最多3个一级菜单，每个一级菜单下可添加最多5个子菜单</div>
+    <div class="content">
+        <div class="phone">
+            <div class="phone-header"></div>
+            <div class="phone-content">
+                <div class="menu-box">
+                    <div class="key">
+                        <span class="fa fa-stack">
+                            <i class="fa fa-keyboard-o fa-2x"></i>
+                        </span>
+                    </div>@*
+                    *@<div class="menu">
+                        <ul class="button">
+                            <li ng-repeat="btn in menu.button" ng-click="menuClick($event,$index)" ng-class="{'width100':menuSize.w100,'width050':menuSize.w050,'width033':menuSize.w033}">
+                                <div ng-if="!btn.end">
+                                    <div class="subbtn-box">
+                                        <input type="hidden" ng-bind="pIndex=$index" value="" />
+                                        <ul class="subbtn">
+                                            <li ng-repeat="subbtn in btn.sub_button.list" ng-click="submenuClick($event,$index,pIndex,btn)">
+                                                <span ng-bind="subbtn.name"></span>
+                                            </li>
+                                            <li ng-if="btn.sub_button.end" ng-click="addSubbtn($event,$index,btn)">
+                                                <span class="fa fa-stack"><i class="fa fa-plus-square fa-2x"></i></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span ng-bind="btn.name"></span>
+                                </div>
+                            </li>
+                            <li ng-if="menu.end" ng-click="addButton()" ng-class="{'width100':menuSize.w100,'width050':menuSize.w050,'width033':menuSize.w033}"><span class="fa fa-stack"><i class="fa fa-plus-square fa-2x"></i></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menuDetail">
+            <div class="editor_inner">
+                <div class="top">
+                    <h4 ng-bind="menuOldname"></h4>
+                    <div class="del"><a href="" ng-click="delmenubtn()">删除子菜单</a></div>
+                </div>
+                <div class="menu-name">
+                    <span>菜单名称</span>
+                    <div class="input-box">
+                        <input type="type" name="name"  ng-model="menuName" value="" />
+                        <p ng-if="menunameover" style="color:#db4d4d;font-size:14px;">字数超过上限</p>
+                        <p>字数不超过8个汉字或16个字母</p>
+                    </div>
+                </div>
+                <div class="menu-type">
+                    <span>菜单内容</span>
+                    <div class="radio-box">
+                        <input id="fsxx" type="radio" name="menu-type" value="{{types.click.val}}" ng-model="menuType" /><label for="fsxx">发送消息</label>
+                        <input id="tzlj" type="radio" name="menu-type" value="{{types.view.val}}" ng-model="menuType" /><label for="tzlj">跳转网页</label>
+                    </div>
+                </div>
+                <div class="menu-detail" ng-switch="menuType">
+                    <div class="txtmsg" ng-switch-when="click">
+                        <div class="top">
+                            <ul>
+                                <li><i class="fa fa-file-text-o fa-lg"></i><span>文字消息</span></li>
+                                <li><i class="fa fa-indent fa-lg"></i><span>图片消息</span></li>
+                            </ul>                            
+                        </div>
+                        <div class="txtmsg-content">
+                            <ul>
+                                <li class="text">
+                                    <textarea name cols="" rows=""></textarea>
+                                </li>
+                                <li class="news"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="linkmsg" ng-switch-when="view">
+                        <p>订阅者点击该子菜单会跳到以下链接</p>
+                        <div class="link-box"><span>页面地址</span><input type="type" ng-model="types.view.url" name="name" value="" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tool-edit">
+        <button class="save" ng-click="save()">保存并发布</button>
+    </div>
+</div>

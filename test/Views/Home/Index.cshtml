@@ -1,0 +1,158 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="wdage">
+<head>
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">*@
+    <title>首页</title>
+    <link href="~/assets/css/reset.css" rel="stylesheet" />
+    <link href="~/assets/lib/fontAwesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/assets/css/index.min.css" rel="stylesheet" />
+    <link href="~/assets/css/cusmenu.min.css?@MySharpUtility.GetTimeSpan()" rel="stylesheet" />
+    <script src="~/assets/lib/angular/angular.min.js"></script>
+    <script src="~/assets/lib/angular/angular-route.min.js"></script>
+    <script src="~/assets/lib/angular/angular-animate.min.js"></script>
+    <script src="~/assets/js/approute.js"></script>
+    <script src="~/assets/js/appctrl.js"></script>
+</head>
+<body ng-controller="appindexCtrl">
+    <!--顶部导航条-->
+    <nav>
+        <div class="topbar-left">
+            <div class="logo">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-2x fa-steam-square"></i>
+                </span>
+            </div>
+            <div class="topbar-btn">
+                <div class="listname">
+                    松下中国{{test}}
+                </div>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <div class="user topbar-btn">
+                <div class="username listname">
+                    <span>消息</span>
+                </div>
+                <ul>
+                    <li>退出</li>
+                </ul>
+            </div>@*
+            *@<div class="user topbar-btn">
+                <div class="username listname">
+                    <span>wangchaohua**@@sina.com</span>
+                </div>
+                <ul>
+                    <li>退出</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="framebody">
+        <div class="body-left">
+            @*<div class="sildebar-content-scroll-box">*@
+                <div class="sildebar-content-scroll">
+                    <div class="sliders-top">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-bars fa-lg"></i>
+                        </span>
+                    </div>
+                    <div class="sildebar-content">
+                        <div class="item-box">
+                            <div class="item">
+                                <div class="item-title" ng-click="itemClick(items.cusmenu)">
+                                    <div class="ico-box"><span class="sidebar-ico fa  fa-caret-down fa-lg"></span></div>
+                                    <span class="sidebar-title">公众号菜单设置</span>
+                                    <span class="sidebar-manage"></span>
+                                </div>
+                                <ul ng-show="items.cusmenu.show" class="">
+                                    <li>
+                                        <a href="#/home/cusMenu">
+                                            <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                            <span>自定义菜单设置</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅001</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="item-title" ng-click="itemClick(items.msg)">
+                                    <div class="ico-box"><span class="sidebar-ico fa  fa-caret-down fa-lg"></span></div>
+                                    <span class="sidebar-title">微信菜单设置</span>
+                                    <span class="sidebar-manage"></span>
+                                </div>
+                                <ul ng-show="items.msg.show">
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅</span>
+                                    </li>
+                                    <li>
+                                        <div class="ico-box"><i class="fa fa-delicious fa-lg"></i></div>
+                                        <span>我心舒畅kkkk</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @*</div>*@
+        </div>
+        <div class="body-right" ng-view>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <button>fafa</button>sf<button>sf</button><button>sff</button>
+    <div></div>
+    <button>x</button>@*
+    *@<button>x</button>@*
+    *@<button>x</button>
+</body>
+</html>
+
+<script>
+    var ele = document.getElementsByTagName("html")[0],
+    size = 320 * 20 / document.body.clientWidth;
+    ele.style.fontSize = size + '%';
+</script>
+<script src="~/assets/lib/prefixfree/prefixfree.min.js"></script>

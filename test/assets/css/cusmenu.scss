@@ -1,0 +1,312 @@
+﻿.cusmenu {
+    padding: 0 30px;
+
+    .info-box {
+        background-color: #e0eaf6;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        color: #222;
+        font-size: 14px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin: 40px 0 0 0;
+
+        .info {
+            display: inline-block;
+            vertical-align: middle;
+            height: 50px;
+            line-height: 20px;
+
+            .info-ico {
+                color: #00aeef;
+            }
+        }
+    }
+
+    .msg {
+        margin: 30px 0 0 0;
+        font-size: 14px !important;
+        color: #8d8d8d;
+    }
+
+    .content {
+        margin: 20px 0 0 0;
+        display: flexbox;
+        display: flex;
+
+        .phone {
+            width: 320px;
+            min-width: 320px;
+            user-select: none;
+
+            .phone-header {
+                height: 60px;
+                background: url('/assets/img/sucai/phonetop.jpg') no-repeat center;
+                background-size: cover;
+            }
+
+            .phone-content {
+                position: relative;
+                height: 400px;
+                border: 1px solid #ccc;
+
+                .menu-box {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    border-top: 1px solid #ccc;
+                    color: #616161;
+                    background-color: #fafafa;
+                    box-sizing: border-box;
+
+                    .key {
+                        display: inline-block;
+                        width: 45px;
+                        height: 45px;
+                        line-height: 45px;
+                        overflow: hidden;
+                        text-align: center;
+
+                        i {
+                            width: 60%;
+                        }
+                    }
+
+                    .menu {
+                        display: inline-block;
+                        width: 272px;
+
+                        > ul.button {
+                            cursor: pointer;
+
+                            > li {
+                                position: relative;
+                                float: left;
+                                width: 33.3%;
+                                height: 45px;
+                                border-left: 1px solid #ccc;
+                                line-height: 45px;
+                                font-size: 14px;
+                                text-align: center;
+                                box-sizing: border-box;
+
+                                &.width100 {
+                                    width: 100%;
+                                }
+
+                                &.width050 {
+                                    width: 50%;
+                                }
+
+                                &.width033 {
+                                    width: 33.33%;
+                                }
+
+                                .subbtn-box {
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 46px;
+                                    z-index: 300;
+
+                                    ul.subbtn {
+                                        display: block;
+                                        margin: 0 auto;
+                                        clear: both;
+                                        width: 100%;
+
+                                        > li {
+                                            clear: both;
+                                            width: 100%;
+                                            color:#8d8d8d;
+                                            overflow: hidden;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                            background-color: #fafafa;
+
+                                            &:hover {
+                                                background-color: #eee;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            > li:hover {
+                                color: #222;
+                            }
+                            background-color: #ff0 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menuDetail {
+            flex: 1;
+            margin: 0 0 0 25px;
+            min-width: 580px;
+            height: 480px;
+            color: #222;
+            font-size: 14px;
+            background: #f4f5f9;
+            .editor_inner {
+                padding: 0 20px 20px 20px;
+                box-sizing: border-box;
+
+                .top {
+                    padding: 9px 0;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #ccc;
+
+                    h4 {
+                        float: left;
+                    }
+
+                    .del {
+                        width: 100%;
+                        text-align: right;
+                        color: #459ae9;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .menu-name {
+                    margin: 35px 0 0 0;
+
+                    span {
+                        display: inline-block;
+                        margin-right: 20px;
+                        float: left;
+                    }
+
+                    .input-box {
+                        display: inline-block;
+                        input {
+                            width: 300px;
+                            height: 30px;
+                            border: 1px solid #ccc;
+                            padding:0 0 0 10px;
+                            color:#222;
+                        }
+
+                        p {
+                            color: #8d8d8d;
+                        }
+                    }
+                }
+
+                .menu-type {
+                    margin: 30px 0 0 0;
+
+                    span {
+                        margin-right: 20px;
+                        float: left;
+                    }
+
+                    .radio-box {
+                        input, label {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .menu-detail {
+                    background-color: #fff;
+                    .txtmsg {
+                        margin:20px 0 0 0;
+                        .top {
+                            //padding-left:25px;
+                            border-bottom: 1px solid #ccc;
+                            color:#8d8d8d;
+                            overflow: hidden;
+                            ul > li {
+                                float: left;
+                                margin-left: 20px;
+                                cursor: pointer;
+
+                                &:hover i {
+                                    color: #222;
+                                }
+                            }
+                        }
+                        .txtmsg-content {
+                            margin:15px 0 0 0 ;
+                            height: 220px;
+                            ul {
+                                width: 100%;
+                            }
+                            .text {
+                                text-align: center;
+
+                                textarea {
+                                    width: 95%;
+                                    height: 180px;
+                                    padding: 15px;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    font-size: 14px;
+                                    color: #222;
+                                }
+                            }
+                        }
+                    }
+                    .linkmsg{
+                        margin:20px 0 0 0;
+                        padding:20px 0 0 20px;
+                        box-sizing:border-box;
+                        font-size:14px;
+                        p{
+                            color:#8d8d8d;
+                        }
+                        .link-box{
+                            margin:20px 0 0 0;
+                            padding:0 0 20px 0;
+                            span{
+
+                            }
+                            input{
+                                margin:0 0 0 20px;
+                                width:300px;
+                                height:30px;      
+                                border:1px solid #ccc;                          
+                                padding:0 0 0 10px;
+                                color:#222;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tool-edit {
+        position: relative;
+        margin: 40px 0 0 0;
+        padding: 0 0 30px 0;
+        box-sizing:border-box;
+        height:60px;
+        .save {
+            position: absolute;
+            left: 400px;
+            border: none;
+            border-radius: 4px;
+            width: 150px;
+            height: 30px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #44b549;
+            cursor: pointer;
+            outline: none;
+
+            &:hover {
+                background-color: #29972e;
+            }
+        }
+    }
+}

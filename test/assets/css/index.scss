@@ -1,0 +1,258 @@
+﻿$navH: 50px;
+$navBG: #0099cc;
+$navBtnHoverBG: #008fbf; //菜单按钮悬浮时颜色
+$navBtnClickBg: #fff; //菜单按钮点击后背景
+$navBtnClicColor: #333; //菜单按钮点击时字体颜色
+$navListBg: #fff; //菜单背景
+$navListColor: #262626; //菜单的字体颜色;
+$navListHoverBG: #f5f5f5; //菜单悬浮时背景色
+$navListItemH: 40px; //菜单元素高度
+$leftMenuW: 180px; //左侧菜单宽度
+$leftMenuYC: 20px; //左侧菜单溢出宽度
+$rightBG: #fff; //右侧背景色 #eaedf1
+//////////////////////////////////
+html {
+}
+
+body {
+    font-size: 12px;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft YaHei" !important;
+    overflow: hidden;
+}
+//导航栏
+nav {
+    background-color: $navBG;
+    height: $navH;
+    overflow: hidden;
+
+    .logo {
+        color: #fff;
+        width: 50px;
+        text-align: center;
+        background-color: $navBtnHoverBG;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .topbar-left, .topbar-right {
+        background-color: $navBtnHoverBG;
+        height: $navH;
+    }
+
+    .topbar-left {
+        float: left;
+    }
+
+    .topbar-right {
+        float: right;
+    }
+
+    .topbar-btn {
+        display: inline-block;
+        background-color: $navBG;
+        margin-left: 1px;
+        cursor: pointer;
+
+        .listname {
+            color: #fff;
+            font-size: 14px;
+            height: $navH;
+            line-height: $navH;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        ul {
+            display: none;
+            background-color: $navListBg;
+            color: $navListColor;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+            li {
+                border-top: 1px solid #ddd;
+                height: $navListItemH;
+                line-height: $navListItemH;
+                padding: 0 0 0 15px;
+                box-sizing: border-box;
+
+                &:hover {
+                    background-color: $navListHoverBG;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: $navBtnHoverBG;
+        }
+    }
+    //用户选项
+    .user {
+    }
+    //topbar按钮点击后样式
+    .topbar-btn-click {
+        .listname {
+            background-color: $navBtnClickBg;
+            color: $navBtnClicColor;
+        }
+
+        ul {
+            display: block;
+        }
+    }
+}
+
+//左侧功能栏
+.framebody {
+    position: absolute;
+    top: $navH;
+    left:0;
+    bottom: 0;
+    width: 100%;
+}
+
+.body-left {
+    user-select: none;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width: $leftMenuW; //临时设置
+    color: #fff;
+    background-color: #293038;
+    overflow:hidden;
+    .sliders-top {
+        width: $leftMenuW;
+        height: 30px;
+        background-color: #394555;
+        cursor: pointer;
+        text-align: center;
+        box-sizing: border-box;
+        color: #aeb9c2;
+    }
+    .sildebar-content-scroll-box{
+        width:$leftMenuW;
+    }
+    .sildebar-content-scroll {
+        position:absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: $leftMenuW + $leftMenuYC;
+        overflow-x:hidden;
+    }
+
+    .sildebar-content {
+        //width: $leftMenuW + $leftMenuYC;
+    }
+
+    .item-title {
+        background-color: #22282e;
+        color: #fff;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+
+        .ico-box {
+            width: 50px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            float: left;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            background-color: #414d5c;
+        }
+    }
+
+    .item {
+        ul {
+            display: block;
+            overflow: hidden;
+            background-color: #293038;
+            cursor: pointer;
+
+            li {
+                height: 40px;
+                color: #fff;
+
+                .ico-box {
+                    width: 50px;
+                    text-align: center;
+                    height: 40px;
+                    line-height: 40px;
+                    float: left;
+                    vertical-align: middle;
+                }
+
+                span {
+                    display: inline-block;
+                    height: 40px;
+                    line-height: 40px;
+                    overflow: hidden;
+                    width: auto;
+                }
+
+                &:hover {
+                    background-color: #37424f;
+                }
+            }
+        }
+        //动画
+        ul.ng-hide-add {
+            animation-name: ul-hide;
+        }
+
+        ul.ng-hide-remove {
+            animation-name: ul-show;
+        }
+
+        ul.ng-hide-add, ul.ng-hide-remove {
+            animation-duration: .2s;
+            animation-timing-function: ease;
+        }
+
+        ul.ng-hide-add.ng-hide-add-active {
+        }
+
+        .ul.ng-hide-remove {
+        }
+
+        .ul.ng-hide-remove.ng-hide-remove-active {
+        }
+    }
+
+    @keyframes ul-hide {
+        from {
+            max-height: 200px;
+        }
+
+        to {
+            max-height: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes ul-show {
+        from {
+            max-height: 0;
+        }
+
+        to {
+            max-height: 200px;
+            opacity: 1;
+        }
+    }
+}
+
+.body-right {
+    position:absolute;
+    top: 0;
+    left: $leftMenuW;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    width:auto;
+    background-color: $rightBG;
+}
